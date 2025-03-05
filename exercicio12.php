@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulários</title>
+    <title>Exercicio 12</title>
 </head>
 <body>
 
-    <form action="index.php" method="get">
+    <form action="exercicio12.php" method="get">
 
-        <fieldset>
-            <legend>Calculadora Científica</legend>
+    <fieldset>
+            <legend>Calculadora</legend>
             <label for="valor1">Valor 1</label>
             <input type="text" name="valor1" id="valor1" placeholder="0" required>
 
@@ -20,6 +20,8 @@
             <input type="text" name="valor2" id="valor2" placeholder="0" required>
             
             <br>
+
+            
 
             <input type="submit" name="somar" value="+">
             <input type="submit" name="subtrair" value="-">

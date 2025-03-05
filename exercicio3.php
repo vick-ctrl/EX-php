@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 2</title>
+    <title>Exercicio 3</title>
 </head>
 <body>
 
-    <form action="exercicio2.php" method="get">
+    <form action="exercicio3.php" method="get">
 
         <fieldset>
-            <legend>Votação :</legend>
-            <label for="idade">Idade</label>
-            <input type="text" name="idade" id="idade" placeholder="0" required>
+            <legend>Maior ou Menor?</legend>
+            <label for="num">Número :</label>
+            <input type="text" name="num" id="num" placeholder="0" required>
 
             <input type="submit" name="verificar" value="verificar">
             
@@ -21,8 +21,8 @@
     </form>
 
     <?php
-        if (isset($_GET['idade'])) {
-            if (empty($_GET['idade'])) {
+        if (isset($_GET['num'])) {
+            if (empty($_GET['num'])) {
                 echo 'esse campo é obrigátorio!';
                 exit();
             }
@@ -30,18 +30,18 @@
             exit();
         }
         
-        $idade= $_GET['idade'];
+        $num = $_GET['num'];
 
-         if ($idade >=18 && $idade <=70) {
-            echo "voto obrigatorio";
+         if ($num > 100  ) {
+            echo "este número é maior que 100!";
             exit();
         }
-         if ( $idade >= 0 && $idade <= 15) {
-            echo "Você não pode votar  ";
+         if ($num < 100  ) {
+            echo "este número é menor que 100 ";
             exit();
         }
          else {
-            echo "voto permitido mas nao obrigatorio !";
+            echo "este número é igual á 100";
             
         }
         
